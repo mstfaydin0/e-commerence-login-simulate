@@ -6,15 +6,15 @@ public class User implements Entity {
     private String firsName;
     private String lastName;
     private String email;
-    private String Password;
-    private int id=0;
+    private String password;
+    private int id;
 
-    public User(String firsName, String lastName, String email, String password) {
+    public User(int id,String firsName, String lastName, String email, String password) {
         this.firsName = firsName;
         this.lastName = lastName;
         this.email = email;
-        Password = password;
-        id++;
+        this.password = password;
+        this.id = id;
     }
 
     public String getFirsName() {
@@ -42,10 +42,10 @@ public class User implements Entity {
     }
 
     public String getPassword() {
-        return Password;
+        return this.password;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.password = password;
     }
 }
