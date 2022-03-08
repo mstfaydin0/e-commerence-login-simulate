@@ -3,11 +3,12 @@ package com.company.entities.concretes;
 import com.company.entities.abstracts.Entity;
 
 public class User implements Entity {
+    private int id;
     private String firsName;
     private String lastName;
     private String email;
     private String password;
-    private int id;
+
 
     public User(int id,String firsName, String lastName, String email, String password) {
         this.firsName = firsName;
@@ -47,5 +48,13 @@ public class User implements Entity {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
